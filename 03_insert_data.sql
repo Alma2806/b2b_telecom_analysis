@@ -41,3 +41,9 @@ INSERT INTO user_segments (client_id, segment_name) VALUES
   (1, 'Large Enterprise'),
   (2, 'Mid-Market'),
   (3, 'SMB');
+
+INSERT INTO clients (client_name, industry, region)
+VALUES ('Example Client', 'Telecom', 'Germany');
+
+INSERT INTO support_tickets (client_id, issue_type, resolution_time_hours, resolved, date_reported)
+VALUES (1, 'Network Issue', 3.5, TRUE, '2025-06-17');  -- Make sure client_id=1 exists in clients table

@@ -71,3 +71,12 @@ CREATE TABLE user_segments (
     segment_name VARCHAR(100),
     FOREIGN KEY (client_id) REFERENCES clients(client_id)
 );
+
+
+ALTER TABLE support_tickets
+ADD COLUMN date_reported DATE;
+
+
+UPDATE support_tickets
+SET date_reported = '2025-01-01'
+WHERE date_reported IS NULL;
